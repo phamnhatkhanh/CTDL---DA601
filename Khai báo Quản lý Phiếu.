@@ -1,0 +1,35 @@
+#include<iostream> 
+#include<string>
+using namespace std;
+
+class BanDoc {
+	string strMaBanDoc;//một mã duy nhất
+	string strHoTen;// họ tên bạn đọc 
+	string strNgayDangKy;//ngày bạn đọc đăng ký tham gia
+
+};
+class PhieuMuon {
+	string strSoPhieuMuon;//Số phiếu mượn
+	string strMaBanDoc;//Mã bạn đọc
+	string strMaSach;//Mã sách
+	string strNgayMuon;//ngày mượn(lấy ngày hiện tại của hệ thống)
+	string strngayTra;//ngày phải trả(= ngày mượn + 7)
+	bool bTinhTrangPhieuMuon;//tình trạng phiếu mượn(Phiếu mượn mới tạo có tình trạng luôn là 1 - có nghĩa là đang mượn, chỉ khi phiếu mượn được trả thì tình trạng là 0).Số thứ tự phiếu mượn bắt đầu là 1 và tăng dần khi phiếu mượn được tạo.
+public:
+	void xuatThongTin() {
+		//Hiển thị thông tin các phiếu mượn :
+	}
+	void phieuMuonSach(){
+		//Màn hình cho phép nhập mã sách và mã bạn đọc.Chỉ tạo được phiếu mượn mới cho 1 mã sách khi tình trạng của nó là 0 (chưa
+		//	có người mượn) và mã bạn đọc có trong danh sách bạn đọc, số phiếu mượn là số phiếu mượn đang có cộng thêm 1 đơn vị, tình trạng phiếu
+		//	mượn mới mặc định là 1. Nếu tạo phiếu mượn thành công thì cập nhật lại tình trạng sách là mã phiếu mượn vừa tạo và ghi cập nhật lại file Sach.txt, PhieuMuon.txt
+	}
+	void traSach() {
+		//Nhập số phiếu mượn để yêu cầu trả sách.Điều kiện trả sách là tình trạng phiếu mượn khác 0. Khi trả sách thành công thì cập nhật
+		//	lại tình trạng phiếu mượn là 0, tình trạng cho sách được trả trong phiếu mượn là 0 và ghi cập nhật lại file Sach.txt, PhieuMuon.txt
+	}
+};
+int main() {
+	return 0;
+}
+
